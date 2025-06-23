@@ -1,0 +1,1 @@
+# BirdCLEF-2025-silver-solution
