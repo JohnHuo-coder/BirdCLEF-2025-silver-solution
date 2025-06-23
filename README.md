@@ -1,6 +1,38 @@
 # BirdCLEF-2025-silver-solution
 This repository contains the training code for the Sound Event Detection(SED) model used in the BirdCLEF 2025 Kaggle Competition.
-## Features
+
+## key Features
+
+### 1. Audio Processing
+- Mel spectrogram extraction with configurable parameters
+- Audio augmentation pipeline including:  
+  - Pitch shifting (±4 semitones)  
+  - Time shifting (±50%)  
+  - Time and frequency masking  
+  - Pink noise masking for high-frequency suppression  
+
+### 2. Model Architecture
+- Custom CNN-based model using timm backbone (seresnext26t_32x4d by default)  
+- Attention mechanism (AttBlockV2) for weighted feature aggregation  
+- Channel smoothing with max+avg pooling  
+- Multi-head output (clipwise + segmentwise predictions)  
+
+### 3. Training Features
+- Dual-stage mixup augmentation:  
+  - Audio-level mixup  
+  - Spectrogram-level mixup  
+- Stratified K-Fold cross-validation  
+- Multiple loss functions supported:  
+  - Focal Loss (both BCE and CE variants)  
+  - Standard BCEWithLogitsLoss  
+- Learning rate scheduling (Cosine, OneCycle, ReduceOnPlateau etc.)  
+
+### 4. Data Handling
+- Dynamic audio chunking/padding  
+- Secondary label support (soft label encoding)  
+- Human voice filtering  
+- Custom collate function for variable-length inputs
+  
 ## Installation 
 `pip install -r requirements.txt`
 ## How to Train
