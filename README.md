@@ -39,6 +39,12 @@ This repository contains the training code for the Sound Event Detection(SED) mo
 This code uses the BirdCLEF 2025 dataset available [here](https://www.kaggle.com/competitions/birdclef-2025/data)
 
 Run the following to download the dataset: `bash download_data.sh`
+## Preprocess
+Inorder for the preprocess python files under the src directory to work, please run preprocessing using absolute path as following:
+
+`python src/preprocess/vad_detection.py`
+
+`python src/preprocess/voice_filter.py`
 ## How to Train
 `python train.py --config config.yaml`
 ## Inference 
