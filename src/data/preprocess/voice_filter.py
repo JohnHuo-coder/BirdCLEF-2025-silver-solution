@@ -6,7 +6,7 @@ import librosa
 with open('train_voice_data_0.4.pkl', 'rb') as f:
     voice_data = pickle.load(f)
 
-data_dir = './birdclef-2025/train_audio'
+data_dir = '../../../data/raw/birdclef-2025/train_audio'
 
 qualified_voice_filenames = set()
 
