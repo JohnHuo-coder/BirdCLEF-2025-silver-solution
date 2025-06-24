@@ -5,10 +5,10 @@ num_workers: 4
 clip_type: "random"
 OUTPUT_DIR: "./"
 
-train_datadir: "/data/birdclef-2025/train_audio"
-train_csv: "/data/1train_preprocess_with_human_voice_filter0.5.csv"
-submission_csv: "/data/birdclef-2025/sample_submission.csv"
-taxonomy_csv: "/data/birdclef-2025/taxonomy.csv"
+train_datadir: "./data/raw/birdclef-2025/train_audio"
+train_csv: "./data/processed/train_preprocess_with_human_voice_filter0.5.csv"
+submission_csv: "./data/raw/birdclef-2025/sample_submission.csv"
+taxonomy_csv: "./data/raw/birdclef-2025/taxonomy.csv"
 
 model_name: "seresnext26t_32x4d"
 pretrained: true
