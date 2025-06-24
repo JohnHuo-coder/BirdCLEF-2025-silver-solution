@@ -15,5 +15,5 @@ for fname in files:
     if len(speech_timestamps):
         voice_data[fname] = speech_timestamps
             
-with open('../../../data/processed/train_voice_data_0.4.pkl', 'wb') as f:
+with open('train_voice_data_0.4.pkl', 'wb') as f:
     pickle.dump(voice_data, f)
