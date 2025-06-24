@@ -40,7 +40,7 @@ This code uses the BirdCLEF 2025 dataset available [here](https://www.kaggle.com
 
 Run the following to download the dataset: `bash download_data.sh`
 ## Preprocess
-Inorder for the preprocess python files under the src directory to work, please run preprocessing using absolute path as following:
+To ensure the preprocessing scripts under the `src` directory work correctly, please run them **from the project root** using the following command:
 
 `python src/preprocess/vad_detection.py`
 
