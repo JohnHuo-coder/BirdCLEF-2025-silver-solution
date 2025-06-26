@@ -50,7 +50,7 @@ Run the following code from the project root directory:
 
 `python train.py --config config/config.yaml`
 ## Inference 
-We used [this public notebook](https://www.kaggle.com/code/johnyim1570/bird25-weightedblend-nfnet-seresnext-0-878) without major modfication for inference
+We ensembled our self-trained single SED model with a high-performing public model, drawing inspiration from [this public notebook](https://www.kaggle.com/code/johnyim1570/bird25-weightedblend-nfnet-seresnext-0-878) The final inference, incorporating our model into the ensemble, is implemented in [this notebook](https://www.kaggle.com/code/huojingyu/bird25-weightedblend-nfnet-seresnext-e7d03f)
 
 ## License 
 This project is licensed under the MIT license 
