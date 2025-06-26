@@ -6,10 +6,10 @@ import librosa
 with open('train_voice_data_0.4.pkl', 'rb') as f:
     voice_data = pickle.load(f)
 
-data_dir = '../../data/raw/birdclef-2025/train_audio'
+data_dir = './data/raw/birdclef-2025/train_audio'
 
 qualified_voice_filenames = set()
-
+print(len(voice_data))
 for full_path, timestamps in voice_data.items():
     total_voice_duration = sum(item['end'] - item['start'] for item in timestamps)
     filename = '/'.join(full_path.split('/')[-2:])
@@ -22,8 +22,9 @@ for full_path, timestamps in voice_data.items():
     if total_voice_duration / audio_duration > 0.5:
         qualified_voice_filenames.add(filename)
 
-df = pd.read_csv('../../data/raw/birdclef-2025/train_preprocess.csv')
+df = pd.read_csv('./data/raw/birdclef-2025/train.csv')
+print(len(df))
 df['has_human'] = df['filename'].isin(qualified_voice_filenames)
 
 print(f"number of samples with more than 50% human voice: {df[df['has_human'] == True].shape[0]}")
-df.to_csv('../../data/processed/train_preprocess_with_human_voice_filter0.5.csv', index=False)
+df.to_csv('./data/processed/train_preprocess_with_human_voice_filter0.5.csv', index=False)
