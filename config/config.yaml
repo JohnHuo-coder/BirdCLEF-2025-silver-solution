@@ -34,11 +34,11 @@ n_fold: 5
 selected_folds: [0]
 
 optimizer: "AdamW"
-lr: 5e-4
-weight_decay: 1e-5
+lr: 0.0005
+weight_decay: 0.00001
 
 scheduler: "CosineAnnealingLR"
-min_lr: 1e-6
+min_lr: 0.000001
 T_max: 30
 
 mixup_prob: 0.1
