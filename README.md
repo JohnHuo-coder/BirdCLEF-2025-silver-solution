@@ -46,7 +46,9 @@ To ensure the preprocessing scripts under the `src` directory work correctly, pl
 
 `python src/preprocess/voice_filter.py`
 ## How to Train
-`python train.py --config config.yaml`
+Run the following code from the project root directory:
+
+`python train.py --config config/config.yaml`
 ## Inference 
 We used [this public notebook](https://www.kaggle.com/code/johnyim1570/bird25-weightedblend-nfnet-seresnext-0-878) without major modfication for inference
 
