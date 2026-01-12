@@ -33,8 +33,6 @@ This repository contains the training code for the Sound Event Detection(SED) mo
 - Human voice filtering  
 - Custom collate function for variable-length inputs
   
-## Installation 
-`pip install -r requirements.txt`
 ## Dataset
 This code uses the BirdCLEF 2025 dataset available [here](https://www.kaggle.com/competitions/birdclef-2025/data)
 
